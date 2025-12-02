@@ -1,11 +1,10 @@
 
 /**
  * Represents a deck of playing cards.
- * <p>
+ * 
  * This class supports multiple decks and provides methods to shuffle,
- * draw cards, and check the remaining size of the deck. It uses the {@link Card} class
+ * draw cards, and check the remaining size of the deck. It uses the Card class
  * to represent individual cards.
- * </p>
  * 
  * @author Huilin Reid
  * @since 11-18-2025
@@ -19,11 +18,10 @@ public class Deck {
 
     /**
      * Constructs a deck containing the specified number of standard 52-card decks.
-     * <p>
+     * 
      * Each deck contains cards for all four suits (Hearts, Diamonds, Clubs, Spades)
      * and thirteen ranks (2-10, J, Q, K, A). After creating the cards, the deck
      * is shuffled automatically.
-     * </p>
      *
      * @param numberOfDecks the number of 52-card decks to include
      */
@@ -44,9 +42,8 @@ public class Deck {
 
     /**
      * Shuffles the deck randomly.
-     * <p>
-     * This method uses {@link Collections#shuffle(List)} to reorder the cards.
-     * </p>
+     * 
+     * This method uses Collections.shuffle(List) to reorder the cards.
      */
     public void shuffle() {
         Collections.shuffle(cards);
@@ -55,7 +52,7 @@ public class Deck {
     /**
      * Draws (removes and returns) the top card from the deck.
      * 
-     * @return the top {@link Card} from the deck
+     * @return the top Card from the deck
      * @throws IllegalStateException if the deck is empty
      */
     public Card drawCard() {

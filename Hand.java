@@ -1,9 +1,8 @@
 /**
  * Represents a hand of playing cards in a card game such as blackjack.
- * <p>
+ * 
  * This class tracks the cards in a hand, calculates the total value
  * according to blackjack rules, detects blackjack, and checks for busts.
- * </p>
  * 
  * @author Huilin Reid
  * @since 11-18-2025
@@ -18,7 +17,7 @@ public class Hand {
     /**
      * Adds a card to the hand.
      *
-     * @param card the {@link Card} to add
+     * @param card the Card to add
      */
     public void addCard(Card card) {
         cards.add(card);
@@ -27,7 +26,7 @@ public class Hand {
     /**
      * Returns the first card in the hand.
      *
-     * @return the first {@link Card} added to the hand
+     * @return the first Card added to the hand
      */
     public Card getFirstCard() {
         return cards.get(0);
@@ -35,10 +34,9 @@ public class Hand {
 
     /**
      * Calculates the total value of the hand according to blackjack rules.
-     * <p>
+     * 
      * Aces are counted as 11 unless the total exceeds 21, in which case
      * each ace is reduced to a value of 1 as needed to avoid busting.
-     * </p>
      *
      * @return the total numerical value of the hand
      */
@@ -47,7 +45,6 @@ public class Hand {
         int aceCount = 0;
         for (Card c : cards) {
             sum += c.getValue();
-            // if (c.toString().startsWith("A")) {
             if (c.getRank().equals("A")) {
                 aceCount++;
             }

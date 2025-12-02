@@ -1,18 +1,15 @@
 /**
  * A simple console-based Blackjack game in Java.
- * <p>
+ * 
  * This class allows a single player to play against a dealer (the computer) using one or more decks.
  * The game follows standard blackjack rules:
- * <ul>
- *   <li>Player aims to beat the dealer without going over 21.</li>
- *   <li>Blackjack ("natural") occurs when the first two cards are an Ace and a 10-value card.</li>
- *   <li>Dealer must hit until reaching at least 17.</li>
- *   <li>Player can hit, stand, or walk away on their turn.</li>
- * </ul>
- * </p>
- * <p>
+ * 
+ *       Player aims to beat the dealer without going over 21.
+ *       Blackjack ("natural") occurs when the first two cards are an Ace and a 10-value card.
+ *       Dealer must hit until reaching at least 17.
+ *       Player can hit, stand, or walk away on their turn.
+ * 
  * The game automatically reshuffles the deck if fewer than 15 cards remain.
- * </p>
  * 
  * @author Huilin Reid
  * @since 11-18-2025
@@ -69,6 +66,11 @@ public class BlackjackGame {
             try {
                 System.out.print(prompt);
                 val = Integer.parseInt(scanner.nextLine());
+                if (val >= min && val <= max) {
+                    return val;
+                } else {
+                    System.out.println("Input must be between " + min + " and " + max + ".");
+                }
             } catch (Exception e) {
                 System.out.println("Invalid input.");
             }
@@ -78,11 +80,10 @@ public class BlackjackGame {
 
     /**
      * Plays a single round of blackjack.
-     * <p>
+     * 
      * Deals initial hands, handles player choices (hit, stand, walk away),
      * manages dealer behavior according to standard rules, determines
      * round outcome, and prints results.
-     * </p>
      */
     private void playRound() {
         if (deck.size() < 15) {

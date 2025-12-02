@@ -1,11 +1,10 @@
 /**
  * Represents a playing card with a suit, rank, and numerical value.
- * <p>
+ *
  * This class is commonly used in card games like blackjack, poker, and others.
  * Each card has a suit (e.g., Hearts, Spades), a rank (e.g., Ace, 2, King),
  * and a corresponding integer value.
- * </p>
- * 
+ *
  * @author Huilin Reid
  * @since 11-18-2025
  * 
